@@ -51,7 +51,11 @@ function draw() {
   line(1150, 700, 1040, 580);
   line(1020, 315, 1150, 195);
   line(665, 199, 800, 320);
+  // //dise
+  // fill("blue")
+  // circle(mouseX,mouseY,30)
 
+  // Coins in center (10 black coins)
   fill("black");
   let centerX = 900;  // X-coordinate of center
   let centerY = 475;  // Y-coordinate of center
@@ -63,6 +67,12 @@ function draw() {
     let x = centerX + radius * cos(angle); // X position of the coin
     let y = centerY + radius * sin(angle); // Y position of the coin
     circle(x, y, 20); // Draw each coin
+  }
+    // Dice (blue circle) only moves when inside the carom board (square)
+  fill("blue");
+  // Check if the mouse is inside the carom board square
+  if (mouseX >= 600 && mouseX <= 1200 && mouseY >= 150 && mouseY <= 750) {
+    circle(mouseX, mouseY, 30); // Draw the dice
   }
 
 
