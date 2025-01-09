@@ -51,4 +51,21 @@ function draw() {
   line(1150, 700, 1040, 580);
   line(1020, 315, 1150, 195);
   line(665, 199, 800, 320);
+
+  fill("black");
+  let centerX = 900;  // X-coordinate of center
+  let centerY = 475;  // Y-coordinate of center
+  let radius = 80;    // Radius of the circle where coins will be placed
+
+  // Loop to create 10 coins in a circular pattern in the center
+  for (let i = 0; i < 10; i++) {
+    let angle = map(i, 0, 10, 0, TWO_PI); // Calculate angle for each coin
+    let x = centerX + radius * cos(angle); // X position of the coin
+    let y = centerY + radius * sin(angle); // Y position of the coin
+    circle(x, y, 20); // Draw each coin
+  }
+
+
+  
+
 }
